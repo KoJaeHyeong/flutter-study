@@ -1,0 +1,6 @@
+1. 기본 페이지 라우팅(기존 Navigator / Getx route) 차이
+2. Route 선언(기존 방식과 Getx route 차이)
+3. Named 페이지 라우팅
+4. 페이지 전환 효과 적용
+5. arguments 전달
+6. 동적 링크 사용
