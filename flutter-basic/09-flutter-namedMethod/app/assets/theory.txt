@@ -1,0 +1,6 @@
+1. MaterialApp 안에 route 기능이 있다!
+    => initialRoute : 초기 화면으로 돌아가는 라우트 == Home
+    Home과 두개 같이 쓸 수 없다!
+
+2. Map 자료구조 : 
+    1. Key : Value

@@ -60,3 +60,17 @@
 
 11. Scaffold.of(context)
 => 현재 주어진 context에서 위로 올라가면서 가장 가까운 Scaffold를 찾아서 반환하라
+
+12. Container는 child를 가지면 그 child의 크기를 가진다.
+13. SafeArea는 화면밖으로 나간 위젯을 볼수 있게 해줌!
+14. margin : 위젯의 바깥쪽 공간
+15. padding : 위젯의 안쪽 공간
+16. Column : 위젯들을 세로로 나열하기 위함 / 여러개를 쓸수 있기 때문에, children을 가진다. => 세로로 가능한 모든 크기를 사용한다.
+17. mainAxisAlignmaent : 주축(가로)이 됨. => Column에서는 세로로 움직임.
+    => spaceEvenly : 같은 간격
+       spaceBetween : 끝에서부터 같은 간격
+18. mainAxisSize : 크기를 조절
+19.stretch : 지정된 크기를 꽉 채운다.
+20. crossAxisAlignment : 횡축(세로)
+21 https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e
+    => 위젯 레이아웃 사이트
