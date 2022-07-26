@@ -1,0 +1,62 @@
+1. class : 객체가 가져야 하는 속성과 기능을 정의한 내용을 담고 있는 설계도 역할
+2. 객체 : 클래스가 정의된 후 메모리상에 할당되었을 때 이를 객체라고 함
+3. dart에서는 '=='가 같다는 뜻!
+4. 인스턴스 생성 : 함수에서 클래스를 이용 ex) 클래스명 변수명 = new 클래스() => 클래스가 가진 모든 속성을 사용 가능!
+5. class내의 생성자(constructor)
+    => class Person {
+        Stirng name;
+        int age;
+        String sex;
+    
+        Person(String name, int age, String sex) { 
+            // 생성자는 인스턴스가 생성될때 한번만 호출된다.
+            this.name = name;
+            this.age = age; // dart가 두 변수를 구분하기 위해서 this를 붙인다.
+            this.sex = sex;
+        }
+
+        //  named argument
+        Person({String name, int age, String sex}) { 
+            // named argument를 설정하면 내가 원하는 것만 사용할 수 있다.
+            this.name = name;
+            this.age = age; // dart가 두 변수를 구분하기 위해서 this를 붙인다.
+            this.sex = sex;
+        }
+    }
+
+    void main() {
+        Person p1 = new Person('tom', 30, 'male') // 순서도 똑같이 입력해줘야한다.
+        Person p2 = new Person('Jane', 27, 'female')
+
+        // 인스턴스 = p1, p2
+        
+    }
+
+       void main() {
+        Person p1 = new Person(age : 30); // 순서 상관x, 원하는 값만 대입 가능
+        Person p2 = new Person(sex: 'male');
+
+        // 인스턴스 = p1, p2
+        
+    }
+    => 우리가 flutter에서 사용 하는 MaterialApp이나 Scaffold 등 밑에 쓰는 것들이 다
+       named argument로부터 비롯된거다.
+
+6. void(타입이다.) : 아무 값도 반환하지 않는 함수
+7.   => addNumber(int num1, int num2) {
+        return num1 + num2;
+    } => 두 숫자를 더한 값을 반환 하는 함수
+
+8. drawer메뉴 : 햄버거 모양
+9. Listview : 세로 방향으로 여러줄로 된 정보를 보여줄 수 있는 기능!(Listview안에 각각 하나를   ListTile이라고 한다.)
+
+04- 폴더의 구조
+=> 'assets폴더안/ 스크린샷'
+
+10. BuildContext : widget tree에서 현재 widget의 위치를 알 수 있는 정보
+    => build앞에 widget은 타입, BuildContext라는 타입의 context라는 인자값을 대입한     Scaffold라는 위젯을 리턴한다는 의미
+    => 모든 위젯은 자신만의 context를 가지고 있다.
+    # 04 - assets폴더 참조
+
+11. Scaffold.of(context)
+=> 현재 주어진 context에서 위로 올라가면서 가장 가까운 Scaffold를 찾아서 반환하라
