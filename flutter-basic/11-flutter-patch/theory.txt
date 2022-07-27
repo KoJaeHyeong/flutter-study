@@ -1,0 +1,7 @@
+1. ScaffordMessenger class
+2. Buttons(TextButton, ElevatedButton, OutlineButton)
+3. Global key
+
+
+
+1. ScaffordMessenger class : 최상위에 있는 ScaffordMessenger가 자손인 scaffold들을 관리 한다.
