@@ -47,7 +47,8 @@ class MyHomePage extends StatelessWidget {
             Obx(
               // 반응형에서는 Obx로 관리 한다.
               () => Text(
-                '${Get.find<CountController>().count.value}',
+                // '${Get.find<CountController>().count.value}',
+                '${CountController.to.count.value}',
                 style: Theme.of(context).textTheme.headline4,
               ),
             ),
@@ -55,7 +56,8 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: Get.find<CountController>().increment,
+        // onPressed: Get.find<CountController>().increment,
+        onPressed: CountController.to.increment,
         tooltip: 'increment',
         child: const Icon(Icons.add),
       ),

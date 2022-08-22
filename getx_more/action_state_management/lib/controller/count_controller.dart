@@ -1,30 +1,29 @@
 import 'package:get/get.dart';
 
-class CountController extends GetxController {
-  @override
-  void onInit() {
-    super.onInit();
-    print("onInit");
-  }
+// class CountController extends GetxController {
+//   @override
+//   void onInit() {
+//     super.onInit();
+//     print("onInit");
+//   }
 
-  @override
-  void onClose() {
-    super.onClose();
-    print("onClose");
-  }
+//   @override
+//   void onClose() {
+//     super.onClose();
+//     print("onClose");
+//   }
 
-  final count = 0.obs;
+//   final count = 0.obs;
 
-  void increment() {
-    count.value++;
-    print('aaa');
-    // 상태가 업데이트 되었다는 것을 알림.
-  }
-}
+//   void increment() {
+//     count.value++;
+//     print('aaa');
+//     // 상태가 업데이트 되었다는 것을 알림.
+//   }
+// }
 
 // obx : 리소스를 아끼기 위해서 새 값을 무시하고 재 빌드하지 않는다.
 // obs : 상태를 관찰?한다고 생각을 하자.
- 
 
 // WORKER 사용 //
 
@@ -34,3 +33,19 @@ class CountController extends GetxController {
 // interval(count, (_) => print("called every second during the value is changed."), time: Duration(seconds: 1));
 
 // 컨트롤러의 onInit, StatefulWidget의 initState 안에서 정의 해야한다.
+
+class CountController extends GetxController {
+  static CountController get to => Get.find<CountController>(); // Get.find()를 자주 이용하게 되는데, static을 이용하는 패턴을 자주 사용함.
+
+  final count = 0.obs;
+
+  void increment() {
+    count.value++;
+    print('aaa');
+    // 상태가 업데이트 되었다는 것을 알림.
+  }
+
+  void decrement() {
+    count.value--;
+  }
+}
