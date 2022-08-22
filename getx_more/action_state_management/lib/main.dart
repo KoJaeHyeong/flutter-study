@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:get/get.dart';
 
+// 상태관리 공부들
 void main() {
   runApp(const MyApp());
 }
